@@ -3,10 +3,13 @@ package org.ifunpas.kpl.kode;
 public class C extends Math {
 	private double n1, n2;
 	private A a;
+	private B b;
+	
 	
 	public C() {
 		System.out.println("Ctor di kelas C");
 		a = new A();
+		b = new B();
 	}
 	
 	public int add() {
@@ -18,11 +21,11 @@ public class C extends Math {
 	}
 	
 	public double mul() {
-		return n1*n2;
+		return b.mul(n1, n2);
 	}
 	
 	public double div() {
-		return n1/n2;
+		return b.div(n1, n2);
 	}
 	
 	public String toString() {
